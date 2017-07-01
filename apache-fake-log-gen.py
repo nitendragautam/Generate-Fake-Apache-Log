@@ -98,7 +98,7 @@ while (flag):
 	if uri.find("apps")>0:
 		uri += str(random.randint(1000,10000))
 
-	resp = numpy.random.choice(response,p=[0.6,0.1,0.1,0.1,0.1])
+	resp = numpy.random.choice(response,p=[0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1])
 	byt = int(random.gauss(5000,50))
 	referer = faker.uri()
 	useragent = numpy.random.choice(ualist,p=[0.5,0.3,0.1,0.05,0.05] )()
