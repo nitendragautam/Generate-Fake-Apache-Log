@@ -71,7 +71,8 @@ for case in switch(output_type):
 	if case('CONSOLE'): pass
 	if case():
 		f = sys.stdout
-
+        
+#Contains the Static IP Address ,In real world it will be dynamic
 sourceIp=["186.46.191.148","115.46.129.238","102.39.148.153","75.9.244.161",
 "103.76.174.122","114.255.6.234","133.7.53.26","246.62.135.218","235.132.165.195", 
 "145.128.91.110", "187.140.80.153", "164.157.18.87", "57.199.13.22", 
@@ -83,6 +84,13 @@ verb=["GET","POST","DELETE","PUT","HEAD"]
 resources=["/list","/wp-content","/wp-admin","/explore","/search/tag/list","/app/main/posts","/posts/posts/explore","/apps/cart.jsp?appID="]
 
 ualist = [faker.firefox, faker.chrome, faker.safari, faker.internet_explorer, faker.opera]
+
+#Script Start Time in seconds
+startTime = int(round(time.time()))
+print('Script Start Time {} for Log Lines {}'.format(startTime,log_lines))
+
+
+
 
 flag = True
 while (flag):
@@ -111,3 +119,12 @@ while (flag):
 	flag = False if log_lines == 0 else True
 	if args.sleep:
 		time.sleep(args.sleep)
+
+#Script Start Time in seconds
+endTime = int(round(time.time()))
+print('Script End Time {}'.format(endTime))
+
+
+##Difference in Time
+diffTime=endTime-startTime
+print('Difference in Time {}'.format(diffTime))
